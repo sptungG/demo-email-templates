@@ -1,0 +1,310 @@
+---
+title: "THÔNG BÁO THU PHÍ"
+language: vi
+bodyClass: bg-white m-0
+class: w-800 mx-auto bg-white p-24 font-sans box-border
+---
+
+<extends src="src/layouts/main.html">
+  <block name="template">
+    <table class="table-auto w-full mb-24">
+      <tbody>
+        <tr>
+          <td class="">
+            <img src="images/logo01.png" height="54" alt="Logo">
+          </td>
+          <td class="">
+            <h1 class="text-xl font-semibold text-right mb-6">
+              THÔNG BÁO THU PHÍ THÁNG {PERIOD_HEAD}
+            </h1>
+            <div class="font-bold text-right italic">Ngày ra thông báo: {NOTI_DAY}</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table-auto w-full mb-24">
+      <tbody>
+        <tr>
+          <td class="font-semibold italic">Kính gửi: Ông/bà {CUSTOMER_NAME}</td>
+          <td class="text-right italic">
+            Mã căn hộ: 
+            <div class="font-semibold">{APARTMENT_CODE}</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="mb-4">
+      {SENDER_NAME} gửi Quý cư dân chi tiết các khoản phí phải
+      thanh toán như sau:
+    </div>
+    <div class="whitespace-nowrap mb-12 text-slate-500 text-right">ĐVT: VNĐ</div>
+    <table class="table-auto w-full mb-6">
+      <tbody>
+        <tr>
+          <td class="font-semibold underline">1. NỢ KỲ TRƯỚC (nếu có)</td>
+          <td class="text-right font-semibold">
+            {DEBT_AMOUNT}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="font-semibold underline mb-6">
+      2. PHÍ ĐIỆN NƯỚC PHÁT SINH TRONG KỲ
+      <span class="bg-yellow-300">{PERIOD_MONTH}</span>
+    </div>
+    <table class="table-auto w-full border-collapse border-collapse-table th-slate-300 mb-6">
+        <thead>
+          <tr>
+            <th class="p-6 border border-solid">Nội dung</th>
+            <th class="p-6 border border-solid text-center">Chỉ số cũ</th>
+            <th class="p-6 border border-solid text-center">Chỉ số mới</th>
+            <th class="p-6 border border-solid text-center">Số tiêu thụ</th>
+            <th class="p-6 border border-solid text-right pr-12">Đơn giá</th>
+            <th class="p-6 border border-solid text-right pr-12">Thành tiền</th>
+          </tr>
+          <tr>
+            <th class="p-6 border border-solid border-b-slate-300">Điện</th>
+            <th colspan="4" class="p-6 border border-solid text-sm text-center">
+              (Chốt ngày từ <span class="bg-yellow-300">{E_HEAD_PERIOD}</span> đến
+              <span class="bg-yellow-300">{E_END_PERIOD}</span>)
+            </th>
+            <th class="p-6 border border-solid"></th>
+          </tr>
+          <tr>
+            <th class="p-6 border border-solid h-28"></th>
+            <th class="p-6 border border-solid text-center">{E_HEAD_INDEX}</th>
+            <th class="p-6 border border-solid text-center">{E_END_INDEX}</th>
+            <th class="p-6 border border-solid text-center">{E_TOTAL_INDEX}</th>
+            <th class="p-6 border border-solid text-right pr-12"></th>
+            <th class="p-6 border border-solid text-right pr-12"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-6 border border-solid">Từ 0 kWh - 50 kWh</td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center">{E_INDEX1}</td>
+            <td class="p-6 border border-solid text-right pr-12">{E_PRICE1}</td>
+            <td class="p-6 border border-solid text-right pr-12">{E_AMOUNT1}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid">Từ 51 kWh - 100 kWh</td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center">{E_INDEX2}</td>
+            <td class="p-6 border border-solid text-right pr-12">{E_PRICE2}</td>
+            <td class="p-6 border border-solid text-right pr-12">{E_AMOUNT2}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid">Từ 101 kWh - 200 kWh</td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center">{E_INDEX3}</td>
+            <td class="p-6 border border-solid text-right pr-12">{E_PRICE3}</td>
+            <td class="p-6 border border-solid text-right pr-12">{E_AMOUNT3}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid">Từ 201 kWh - 300 kWh</td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center">{E_INDEX4}</td>
+            <td class="p-6 border border-solid text-right pr-12">{E_PRICE4}</td>
+            <td class="p-6 border border-solid text-right pr-12">{E_AMOUNT4}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid">Từ 301 kWh - 400 kWh</td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center">{E_INDEX5}</td>
+            <td class="p-6 border border-solid text-right pr-12">{E_PRICE5}</td>
+            <td class="p-6 border border-solid text-right pr-12">{E_AMOUNT5}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid">Từ 401 kWh trở lên</td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center">{E_INDEX6}</td>
+            <td class="p-6 border border-solid text-right pr-12">{E_PRICE6}</td>
+            <td class="p-6 border border-solid text-right pr-12">{E_AMOUNT6}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid"></td>
+            <td colspan="4" class="p-6 border border-solid pr-12 text-right font-semibold">Cộng</td>
+            <td class="p-6 border border-solid pr-12 text-right font-semibold">{E_TOTAL_AMOUNT}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid"></td>
+            <td colspan="4" class="p-6 border border-solid pr-12 text-right">Thuế GTGT 10%</td>
+            <td class="p-6 border border-solid pr-12 text-right font-semibold">{E_PERCENT}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid"></td>
+            <td colspan="4" class="p-6 border border-solid pr-12 text-right font-semibold italic">
+              Tổng cộng
+            </td>
+            <td class="p-6 border border-solid pr-12 text-right font-semibold">{E_INTO_MONEY}</td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th class="border-b-slate-300 p-6 border border-solid">Nước</th>
+            <th colspan="4" class="text-sm p-6 border border-solid text-center">
+              (Chốt ngày từ <span class="bg-yellow-300">{W_HEAD_PERIOD}</span> đến
+              <span class="bg-yellow-300">{W_END_PERIOD}</span>)
+            </th>
+            <th class="p-6 border border-solid"></th>
+          </tr>
+          <tr>
+            <th class="p-6 border border-solid h-28"></th>
+            <th class="p-6 border border-solid text-center">{W_HEAD_INDEX}</th>
+            <th class="p-6 border border-solid text-center">{W_END_INDEX}</th>
+            <th class="p-6 border border-solid text-center">{W_TOTAL_INDEX}</th>
+            <th class="p-6 border border-solid text-right pr-12"></th>
+            <th class="p-6 border border-solid text-right pr-12"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-6 border border-solid">Từ 0 m3 - 10 m3</td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center">{W_INDEX1}</td>
+            <td class="p-6 border border-solid text-right pr-12">{W_PRICE1}</td>
+            <td class="p-6 border border-solid text-right pr-12">{W_AMOUNT1}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid">Từ 11 m3 - 20 m3</td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center">{W_INDEX2}</td>
+            <td class="p-6 border border-solid text-right pr-12">{W_PRICE2}</td>
+            <td class="p-6 border border-solid text-right pr-12">{W_AMOUNT2}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid">Từ 21 m3 - 30 m3</td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center">{W_INDEX3}</td>
+            <td class="p-6 border border-solid text-right pr-12">{W_PRICE3}</td>
+            <td class="p-6 border border-solid text-right pr-12">{W_AMOUNT3}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid">Trên 30 m3</td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center"></td>
+            <td class="p-6 border border-solid text-center">{W_INDEX4}</td>
+            <td class="p-6 border border-solid text-right pr-12">{W_PRICE4}</td>
+            <td class="p-6 border border-solid text-right pr-12">{W_AMOUNT4}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid"></td>
+            <td colspan="4" class="p-6 border border-solid pr-12 text-right font-semibold">Cộng</td>
+            <td class="p-6 border border-solid pr-12 text-right font-semibold">	
+              {W_TOTAL_AMOUNT}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid"></td>
+            <td colspan="4" class="p-6 border border-solid pr-12 text-right">
+              Thuế GTGT 5%, Phí BVMT 10%
+            </td>
+            <td class="p-6 border border-solid pr-12 text-right font-semibold">	
+              {W_PERCENT}</td>
+          </tr>
+          <tr>
+            <td class="p-6 border border-solid"></td>
+            <td colspan="4" class="p-6 border border-solid pr-12 text-right font-semibold italic">
+              Tổng cộng
+            </td>
+            <td class="p-6 border border-solid pr-12 text-right font-semibold">	
+              {W_INTO_MONEY}</td>
+          </tr>
+        </tbody>
+    </table>
+    <table class="table-auto w-full mb-6">
+      <tbody>
+        <tr>
+          <td class="font-semibold underline">3. CÁC LOẠI PHÍ KHÁC <span class="bg-yellow-300">{PERIOD_MONTH}</span></td>
+          <td class="text-right font-semibold">
+            {ORTHER_FEE_AMOUNT}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table-auto w-full border-collapse border-collapse-table mb-6">
+      <thead>
+        <tr>
+          <th class="p-6 border border-solid">Nội dung</th>
+          <th class="p-6 border border-solid text-right pr-12">
+            Diện tích
+            <div class="text-sm">m2</div>
+          </th>
+          <th class="p-6 border border-solid text-right pr-12">Đơn giá</th>
+          <th class="p-6 border border-solid text-right pr-12">Thành tiền</th>
+          <th class="p-6 border border-solid text-right pr-12">
+            Thuế
+            <div class="text-sm">GTGT 10%</div>
+          </th>
+          <th class="p-6 border border-solid text-right pr-12">Tổng tiền</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="p-6 border border-solid">PHÍ QUẢN LÝ VẬN HÀNH</td>
+          <td class="p-6 border border-solid text-right pr-12">{ACREAGE_APARTMENT}</td>
+          <td class="p-6 border border-solid text-right pr-12">{PRICE_MANAGEMENT}</td>
+          <td class="p-6 border border-solid text-right pr-12">{MANAGEMENT_AMOUNT}</td>
+          <td class="p-6 border border-solid text-right pr-12">{PERCENT_MANAGEMENT}</td>
+          <td class="p-6 border border-solid text-right pr-12">{INTO_MONEY_MANAGEMENT}</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table-auto w-full mb-6">
+      <tbody>
+        <tr>
+          <td class="font-semibold text-red-500 underline">
+            4. SỐ TIỀN ĐÃ THANH TOÁN DƯ KỲ TRƯỚC (Nếu có)
+          </td>
+          <td class="text-right pr-12 font-semibold text-red-500">
+            {PREVIOUS_BALANCE}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table-auto w-full mb-6">
+      <tbody>
+        <tr>
+          <td class="font-semibold underline">
+            5. SỐ TIỀN CÒN PHẢI THANH TOÁN (5 = 1 + 2 + 3 - 4)
+          </td>
+          <td class="text-right pr-12 font-semibold underline">
+            {TOTAL_MONEY}
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="text-sm text-slate-600 pt-6">
+            Bằng chữ: {TOTAL_MONEY_TEXT}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="font-semibold italic mb-6 mt-12">GHI CHÚ:</div>
+    <div class="font-semibold text-sm italic mb-6 leading-tight">
+      <p class="">
+        + Biểu phí dịch vụ trên nếu có thay đổi sẽ được cập nhật và thông báo trước. Bản sao phí dịch vụ luôn sẵn ở quầy lễ tân.
+      </p>
+      <p class="">+ Qúy cư dân có nhu cầu nhận hóa đơn VAT đã xuất vui lòng liên hệ bộ phận Kế toán - BQLTN</p>
+      <p class="">+ Phương thức thanh toán tại thời điểm hiện tại:</p>
+      <p class="">&nbsp; &nbsp;* Bằng chuyển khoản: 
+        <span class="underline">Ghi rõ nội dung: (Họ tên) <span class="bg-yellow-300">MÃ CĂN</span> thanh toán TBTP 04/2023</span>
+        <p class="py-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="">Tên tài khoản: Công ty TNHH Đầu tư Bất động sản DOJILAND</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-base">STK: 0941 0086 88688</span></p>
+        <p class="pb-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngân hàng: <span class="">VIETCOMBANK</span></p>
+      </p> 
+      <p class="">+ Thời gian thu phí:<span class="underline">Từ ngày 25 đến 30 hàng tháng</span></p>
+      <p class="">+ Mọi thắc mắc, Quý chủ hộ liên hệ trực tiếp với BQLTN hoặc Lễ tân BQLTN theo số Hotline: 0866.599.936 để được giải đáp.</p>
+    </div>
+    <div class="font-semibold mt-12 pb-[100px] pl-[72px]">
+      Ban quản lý TSM
+    </div>
+  </block>
+</extends>

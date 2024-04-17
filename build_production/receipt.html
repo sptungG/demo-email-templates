@@ -1,0 +1,315 @@
+<html lang="vi" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <meta charset="utf-8">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>THÔNG BÁO THU PHÍ</title>
+</head>
+<body style="margin: 0; background-color: #fff">
+  <div role="article" aria-roledescription="email" aria-label="THÔNG BÁO THU PHÍ" lang="vi" style="margin-left: auto; margin-right: auto; box-sizing: border-box; width: 800px; background-color: #fff; padding: 24px; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif">
+    <table style="margin-bottom: 24px; width: 100%; table-layout: auto" cellpadding="0" cellspacing="0" role="none">
+      <tbody>
+        <tr>
+          <td>
+            <img src="images/logo01.png" height="54" alt="Logo">
+          </td>
+          <td>
+            <h1 style="margin-bottom: 6px; text-align: right; font-size: 20px; font-weight: 600">
+              THÔNG BÁO THU PHÍ THÁNG {PERIOD_HEAD}
+            </h1>
+            <div style="text-align: right; font-weight: 700; font-style: italic">Ngày ra thông báo: {NOTI_DAY}</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="margin-bottom: 24px; width: 100%; table-layout: auto;" cellpadding="0" cellspacing="0" role="none">
+      <tbody>
+        <tr>
+          <td style="font-weight: 600; font-style: italic;">Kính gửi: Ông/bà {CUSTOMER_NAME}</td>
+          <td style="text-align: right; font-style: italic;">
+            Mã căn hộ:
+            <div style="font-weight: 600;">{APARTMENT_CODE}</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-bottom: 4px">
+      {SENDER_NAME} gửi Quý cư dân chi tiết các khoản phí phải
+      thanh toán như sau:
+    </div>
+    <div style="margin-bottom: 12px; white-space: nowrap; text-align: right; color: #64748b">ĐVT: VNĐ</div>
+    <table style="margin-bottom: 6px; width: 100%; table-layout: auto;" cellpadding="0" cellspacing="0" role="none">
+      <tbody>
+        <tr>
+          <td style="font-weight: 600; text-decoration-line: underline">1. NỢ KỲ TRƯỚC (nếu có)</td>
+          <td style="text-align: right; font-weight: 600;">
+            {DEBT_AMOUNT}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-bottom: 6px; font-weight: 600; text-decoration-line: underline;">
+      2. PHÍ ĐIỆN NƯỚC PHÁT SINH TRONG KỲ
+      <span style="background-color: #fde047">{PERIOD_MONTH}</span>
+    </div>
+    <table style="margin-bottom: 6px; width: 100%; table-layout: auto; border-collapse: collapse" cellpadding="0" cellspacing="0" role="none">
+      <thead>
+        <tr>
+          <th style="border-width: 1px; border-style: solid; padding: 6px">Nội dung</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px; text-align: center">Chỉ số cũ</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">Chỉ số mới</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">Số tiêu thụ</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right">Đơn giá</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">Thành tiền</th>
+        </tr>
+        <tr>
+          <th style="border-style: solid; border-bottom: solid #cbd5e1; border-width: 1px; padding: 6px">Điện</th>
+          <th colspan="4" style="border-width: 1px; border-style: solid; padding: 6px; text-align: center; font-size: 14px">
+            (Chốt ngày từ <span style="background-color: #fde047;">{E_HEAD_PERIOD}</span> đến
+            <span style="background-color: #fde047;">{E_END_PERIOD}</span>)
+          </th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px;"></th>
+        </tr>
+        <tr>
+          <th style="height: 28px; border-width: 1px; border-style: solid; padding: 6px"></th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{E_HEAD_INDEX}</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{E_END_INDEX}</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{E_TOTAL_INDEX}</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;"></th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;">Từ 0 kWh - 50 kWh</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{E_INDEX1}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{E_PRICE1}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{E_AMOUNT1}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;">Từ 51 kWh - 100 kWh</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{E_INDEX2}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{E_PRICE2}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{E_AMOUNT2}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;">Từ 101 kWh - 200 kWh</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{E_INDEX3}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{E_PRICE3}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{E_AMOUNT3}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;">Từ 201 kWh - 300 kWh</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{E_INDEX4}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{E_PRICE4}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{E_AMOUNT4}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;">Từ 301 kWh - 400 kWh</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{E_INDEX5}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{E_PRICE5}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{E_AMOUNT5}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;">Từ 401 kWh trở lên</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{E_INDEX6}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{E_PRICE6}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{E_AMOUNT6}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;"></td>
+          <td colspan="4" style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right; font-weight: 600;">Cộng</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right; font-weight: 600;">{E_TOTAL_AMOUNT}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;"></td>
+          <td colspan="4" style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">Thuế GTGT 10%</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right; font-weight: 600;">{E_PERCENT}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;"></td>
+          <td colspan="4" style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right; font-weight: 600; font-style: italic;">
+            Tổng cộng
+          </td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right; font-weight: 600;">{E_INTO_MONEY}</td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr>
+          <th style="border-style: solid; border-bottom: solid #cbd5e1; border-width: 1px; padding: 6px;">Nước</th>
+          <th colspan="4" style="border-width: 1px; border-style: solid; padding: 6px; text-align: center; font-size: 14px;">
+            (Chốt ngày từ <span style="background-color: #fde047;">{W_HEAD_PERIOD}</span> đến
+            <span style="background-color: #fde047;">{W_END_PERIOD}</span>)
+          </th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px;"></th>
+        </tr>
+        <tr>
+          <th style="height: 28px; border-width: 1px; border-style: solid; padding: 6px;"></th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{W_HEAD_INDEX}</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{W_END_INDEX}</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{W_TOTAL_INDEX}</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;"></th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;">Từ 0 m3 - 10 m3</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{W_INDEX1}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{W_PRICE1}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{W_AMOUNT1}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;">Từ 11 m3 - 20 m3</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{W_INDEX2}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{W_PRICE2}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{W_AMOUNT2}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;">Từ 21 m3 - 30 m3</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{W_INDEX3}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{W_PRICE3}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{W_AMOUNT3}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;">Trên 30 m3</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;"></td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px; text-align: center;">{W_INDEX4}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{W_PRICE4}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{W_AMOUNT4}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;"></td>
+          <td colspan="4" style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right; font-weight: 600;">Cộng</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right; font-weight: 600;">
+            {W_TOTAL_AMOUNT}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;"></td>
+          <td colspan="4" style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">
+            Thuế GTGT 5%, Phí BVMT 10%
+          </td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right; font-weight: 600;">
+            {W_PERCENT}</td>
+        </tr>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;"></td>
+          <td colspan="4" style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right; font-weight: 600; font-style: italic;">
+            Tổng cộng
+          </td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right; font-weight: 600;">
+            {W_INTO_MONEY}</td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="margin-bottom: 6px; width: 100%; table-layout: auto;" cellpadding="0" cellspacing="0" role="none">
+      <tbody>
+        <tr>
+          <td style="font-weight: 600; text-decoration-line: underline;">3. CÁC LOẠI PHÍ KHÁC <span style="background-color: #fde047;">{PERIOD_MONTH}</span></td>
+          <td style="text-align: right; font-weight: 600;">
+            {ORTHER_FEE_AMOUNT}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="margin-bottom: 6px; width: 100%; table-layout: auto; border-collapse: collapse;" cellpadding="0" cellspacing="0" role="none">
+      <thead>
+        <tr>
+          <th style="border-width: 1px; border-style: solid; padding: 6px;">Nội dung</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">
+            Diện tích
+            <div style="font-size: 14px;">m2</div>
+          </th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">Đơn giá</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">Thành tiền</th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">
+            Thuế
+            <div style="font-size: 14px;">GTGT 10%</div>
+          </th>
+          <th style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">Tổng tiền</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border-width: 1px; border-style: solid; padding: 6px;">PHÍ QUẢN LÝ VẬN HÀNH</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{ACREAGE_APARTMENT}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{PRICE_MANAGEMENT}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{MANAGEMENT_AMOUNT}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{PERCENT_MANAGEMENT}</td>
+          <td style="border-width: 1px; border-style: solid; padding: 6px 12px 6px 6px; text-align: right;">{INTO_MONEY_MANAGEMENT}</td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="margin-bottom: 6px; width: 100%; table-layout: auto;" cellpadding="0" cellspacing="0" role="none">
+      <tbody>
+        <tr>
+          <td style="font-weight: 600; color: #ef4444; text-decoration-line: underline">
+            4. SỐ TIỀN ĐÃ THANH TOÁN DƯ KỲ TRƯỚC (Nếu có)
+          </td>
+          <td style="padding-right: 12px; text-align: right; font-weight: 600; color: #ef4444;">
+            {PREVIOUS_BALANCE}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="margin-bottom: 6px; width: 100%; table-layout: auto;" cellpadding="0" cellspacing="0" role="none">
+      <tbody>
+        <tr>
+          <td style="font-weight: 600; text-decoration-line: underline;">
+            5. SỐ TIỀN CÒN PHẢI THANH TOÁN (5 = 1 + 2 + 3 - 4)
+          </td>
+          <td style="padding-right: 12px; text-align: right; font-weight: 600; text-decoration-line: underline;">
+            {TOTAL_MONEY}
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-top: 6px; font-size: 14px; color: #475569">
+            Bằng chữ: {TOTAL_MONEY_TEXT}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-bottom: 6px; margin-top: 12px; font-weight: 600; font-style: italic">GHI CHÚ:</div>
+    <div style="margin-bottom: 6px; font-size: 14px; font-weight: 600; font-style: italic; line-height: 1.25">
+      <p>
+        + Biểu phí dịch vụ trên nếu có thay đổi sẽ được cập nhật và thông báo trước. Bản sao phí dịch vụ luôn sẵn ở quầy lễ tân.
+      </p>
+      <p>+ Qúy cư dân có nhu cầu nhận hóa đơn VAT đã xuất vui lòng liên hệ bộ phận Kế toán - BQLTN</p>
+      <p>+ Phương thức thanh toán tại thời điểm hiện tại:</p>
+      <p>&nbsp; &nbsp;* Bằng chuyển khoản:
+        <span style="text-decoration-line: underline;">Ghi rõ nội dung: (Họ tên) <span style="background-color: #fde047;">MÃ CĂN</span> thanh toán TBTP 04/2023</span>
+      </p>
+      <p style="padding-top: 3px; padding-bottom: 3px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Tên tài khoản: Công ty TNHH Đầu tư Bất động sản DOJILAND</span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 16px">STK: 0941 0086 88688</span></p>
+      <p style="padding-bottom: 3px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngân hàng: <span>VIETCOMBANK</span></p>
+      <p></p>
+      <p>+ Thời gian thu phí:<span style="text-decoration-line: underline;">Từ ngày 25 đến 30 hàng tháng</span></p>
+      <p>+ Mọi thắc mắc, Quý chủ hộ liên hệ trực tiếp với BQLTN hoặc Lễ tân BQLTN theo số Hotline: 0866.599.936 để được giải đáp.</p>
+    </div>
+    <div style="margin-top: 12px; padding-bottom: 100px; padding-left: 72px; font-weight: 600">
+      Ban quản lý TSM
+    </div>
+  </div>
+</body>
+</html>
